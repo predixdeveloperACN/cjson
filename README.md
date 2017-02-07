@@ -1,0 +1,2 @@
+# cjson
+compress json array
