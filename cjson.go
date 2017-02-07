@@ -41,3 +41,9 @@ func CompressJSON(src interface{}) (retVal TabularJson, err error) {
 
 	return
 }
+
+// TODO: implement decompress json tab
+func DecompressJSON(target interface{}, tab *[]TabularJson) (err error) {
+
+	return
+}

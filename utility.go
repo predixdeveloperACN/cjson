@@ -24,12 +24,12 @@ func parseJsonField(v reflect.StructField) (string, bool) {
 	var propName string
 
 	if !isFirstRuneUpper(v.Name) {
-		return
+		return "", false
 	}
 	jsonTagName := trimCommaLeft(v.Tag.Get("json"))
 	if jsonTagName != "" {
 		if jsonTagName == "-" {
-			return
+			return "", false
 		}
 		propName = jsonTagName
 	} else {
